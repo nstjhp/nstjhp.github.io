@@ -1,0 +1,170 @@
+/* Adapted from a .css file that is Copyright (c) 2009-2013 Jeremy Ashkenas
+ * https://github.com/jashkenas/docco
+ * NP modified 02/03/14
+ * MIT licence */
+/*--------------------- Typography ----------------------------*/
+
+@font-face {
+    font-family: 'fleurons';
+    src: url('http://jashkenas.github.io/docco/resources/linear/public/fonts/fleurons.eot');
+    src: url('http://jashkenas.github.io/docco/resources/linear/public/fonts/fleurons.eot?#iefix') format('embedded-opentype'),
+         url('http://jashkenas.github.io/docco/resources/linear/public/fonts/fleurons.woff') format('woff'),
+         url('http://jashkenas.github.io/docco/resources/linear/public/fonts/fleurons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*--------------------- Base Styles ----------------------------*/
+
+body {
+  font-family: Andika, Alegreya, Minion Pro;
+  background: url('http://jashkenas.github.io/docco/resources/linear/public/images/gray.png') #fff;
+  background-size: 322px;
+  margin: 0;
+}
+
+hr {
+  height: 1px;
+  background: #ddd;
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /*color: #112233;*/
+  color: #8a0000;
+  font-weight: normal;
+  font-family: Lato, Andika, Myriad Pro ;
+  /* text-transform: uppercase;*/
+  line-height: 1em;
+  margin-top: 50px;
+}
+  h1 {
+    margin: 0;
+    text-align: center;
+    color: #8a0000;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h1:after {
+    content: "8";
+    display: block;
+    font-family: 'fleurons', NeoclassicFleuronsFree;
+    /*color: #999;*/
+    color: #8a0000;
+    font-size: 80px;
+    padding: 10px 0 25px;
+  }
+
+a {
+  color: #000;
+}
+
+b, strong {
+  font-weight: bold;
+  font-family: Andika Basic, Alegreya, Minion Pro;
+}
+
+blockquote {
+  border-left: 5px solid #ccc;
+  margin-left: 0;
+  padding: 1px 0 1px 1em;
+}
+  .page blockquote p {
+    font-family: Monaco, Menlo, Consolas, monospace;
+    font-size: 14px; line-height: 19px;
+    color: #999;
+    margin: 10px 0 0;
+    white-space: pre-wrap;
+  }
+
+pre, tt, code {
+  font-family: Monaco, Menlo, Consolas, monospace;
+  font-size: 14px;
+  display: inline-block;
+  /*border: 1px solid #EAEAEA;*/
+  border-radius: 10px;
+  /*background: #f8f8f8;*/
+  color: #555;
+  padding: 0 5px;
+  line-height: 20px;
+}
+  .page pre {
+    margin: 0;
+    width: 658px;
+    padding: 10px 15px;
+    /*background: #fcfcfc;*/
+    background: #272822;
+    -moz-box-shadow:    inset 0 0 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    box-shadow:         inset 0 0 10px rgba(0,0,0,0.1);
+    overflow-x: auto;
+  }
+    .page pre code {
+      border: 0;
+      padding: 0;
+   /*   background: transparent;*/
+    }
+
+.fleur {
+  font-family: "fleurons", NeoclassicFleuronsFree;
+  font-size: 100px;
+  text-align: center;
+  margin: 40px 0;
+  /*color: #ccc;*/
+  color: #8a0000;
+}
+
+/*--------------------- Layout ----------------------------*/
+
+.container {
+  width: 810px;
+  margin: 0 auto;
+  background: #fff;
+  background: rgba(255,255,255, 0.4);
+  overflow: hidden;
+}
+  .page {
+    width: 690px;
+    padding: 30px;
+    margin: 30px;
+    background: #fff;
+    font-size: 17px;
+    line-height: 26px;
+  }
+    .page p {
+      color: #30404f;
+      margin: 26px 0;
+    }
+
+ul.sections {
+  list-style: none;
+  padding:0 0 5px 0;;
+  margin:0;
+}
+
+.page li p {
+  margin: 12px 0;
+}
+
+.toc {
+  max-height: 0;
+  overflow: hidden;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  -moz-transition: max-height 1s;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
+}
+  .header:hover .toc {
+    max-height: 500px;
+  }
+  .toc h3 {
+    margin-top: 20px;
+  }
+  .toc ol {
+    margin: 0 0 20px 0;
+    display: inline-block;
+    text-align: left;
+    list-style-type: upper-roman;
+  }
